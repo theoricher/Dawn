@@ -1,5 +1,17 @@
 {{!-- {{#if post.access}}
 <div class="comment container small">
-    If you want to embed comments, this is a good place to do it!
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = "{{url absolute="true"}}";  
+	this.page.identifier = "ghost-{{comment_id}}"
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://astuces-it.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
 </div>
 {{/if}} --}}
